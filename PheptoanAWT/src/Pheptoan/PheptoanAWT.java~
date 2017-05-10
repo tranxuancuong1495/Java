@@ -28,6 +28,7 @@ public class PheptoanAWT extends Frame implements ActionListener,WindowListener 
 		tfa = new TextField(10);
 		tfa.setEditable(true);
 		add(tfa);	
+		tfa.addActionListener(this);
 		
 		lblb = new Label("b =");
 		add(lblb);
@@ -35,6 +36,7 @@ public class PheptoanAWT extends Frame implements ActionListener,WindowListener 
 		tfb = new TextField(10);
 		tfb.setEditable(true);
 		add(tfb);
+		tfb.addActionListener(this);
 		
 		btncong = new Button("+");
 		add(btncong);
@@ -91,7 +93,7 @@ public class PheptoanAWT extends Frame implements ActionListener,WindowListener 
 				tfkq.setText("Loi~");
 			}
 			else{
-				setKq(a/b);
+				setKq(a - b);
 				tfkq.setText(getKq()+"");
 			}
 		}
